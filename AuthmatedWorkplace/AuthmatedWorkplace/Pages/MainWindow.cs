@@ -35,5 +35,14 @@ namespace AuthmatedWorkplace
             if (dialogResult == DialogResult.Yes) this._context?.SaveChanges();
             else if (dialogResult == DialogResult.Cancel) e.Cancel = true;
         }
+
+        private void entityDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            var x = entityDataGridView.CurrentRow.Index;
+
+            MessageBox.Show("any message");
+               
+        }
     }
 }

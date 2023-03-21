@@ -30,17 +30,19 @@
         {
             components = new System.ComponentModel.Container();
             entityDataGridView = new DataGridView();
-            entityBindingSource = new BindingSource(components);
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             descriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             numDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            entityBindingSource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)entityDataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)entityBindingSource).BeginInit();
             SuspendLayout();
             // 
             // entityDataGridView
             // 
+            entityDataGridView.AllowUserToAddRows = false;
+            entityDataGridView.AllowUserToDeleteRows = false;
             entityDataGridView.AutoGenerateColumns = false;
             entityDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             entityDataGridView.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn, descriptionDataGridViewTextBoxColumn, numDataGridViewTextBoxColumn });
@@ -48,13 +50,11 @@
             entityDataGridView.Dock = DockStyle.Fill;
             entityDataGridView.Location = new Point(0, 0);
             entityDataGridView.Name = "entityDataGridView";
+            entityDataGridView.ReadOnly = true;
             entityDataGridView.RowTemplate.Height = 25;
             entityDataGridView.Size = new Size(800, 450);
             entityDataGridView.TabIndex = 0;
-            // 
-            // entityBindingSource
-            // 
-            entityBindingSource.DataSource = typeof(Data.Models.Entity);
+            entityDataGridView.CellContentClick += entityDataGridView_CellContentClick;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -71,6 +71,7 @@
             nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             nameDataGridViewTextBoxColumn.HeaderText = "Name";
             nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
@@ -78,6 +79,7 @@
             descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
             descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // numDataGridViewTextBoxColumn
             // 
@@ -85,6 +87,11 @@
             numDataGridViewTextBoxColumn.DataPropertyName = "Num";
             numDataGridViewTextBoxColumn.HeaderText = "Num";
             numDataGridViewTextBoxColumn.Name = "numDataGridViewTextBoxColumn";
+            numDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // entityBindingSource
+            // 
+            entityBindingSource.DataSource = typeof(Data.Models.Entity);
             // 
             // MainWindow
             // 
