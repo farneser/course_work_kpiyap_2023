@@ -18,10 +18,7 @@ namespace AuthmatedWorkplace
         {
             InitializeComponent();
 
-            if (!string.IsNullOrEmpty(Properties.Settings.Default.UserID))
-            {
-                LoginSucces();
-            }
+            this.Activated += AfterLoading;
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -39,6 +36,7 @@ namespace AuthmatedWorkplace
             {
                 Properties.Settings.Default.UserID = user.Id;
                 Properties.Settings.Default.Save();
+
                 LoginSucces();
             }
 
@@ -48,11 +46,31 @@ namespace AuthmatedWorkplace
             }
         }
 
+        private void AfterLoading(object sender, EventArgs e)
+        {
+            this.Activated -= AfterLoading;
+
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.UserID))
+            {
+                LoginSucces();
+            }
+        }
+
         private void LoginSucces()
         {
-            // MessageBox.Show(Properties.Settings.Default.UserID, "Успешный вход");
-            new MainWindow().Show();
-            Close();
+
+            Hide();
+            
+            MessageBox.Show(Properties.Settings.Default.UserID, "Успешный вход");
+
+            var main = new MainWindow();
+            main.Closed += (s, args) => this.Close();
+            main.Show();
+
+        }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
         }
     }
 }

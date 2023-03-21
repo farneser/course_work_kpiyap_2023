@@ -86,6 +86,7 @@
             registerButton.TabIndex = 5;
             registerButton.Text = "Register";
             registerButton.UseVisualStyleBackColor = true;
+            registerButton.Click += registerButton_Click;
             // 
             // Login
             // 

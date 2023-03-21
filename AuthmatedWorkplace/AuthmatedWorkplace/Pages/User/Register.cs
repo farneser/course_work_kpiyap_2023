@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace AuthmatedWorkplace
 {
@@ -15,6 +16,11 @@ namespace AuthmatedWorkplace
         public Register()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+ 
         }
     }
 }
