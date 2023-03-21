@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AuthmatedWorkplace.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,9 +19,30 @@ namespace AuthmatedWorkplace
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void registerButton_Click(object sender, EventArgs e)
         {
- 
+            if (!(passwordTextBox.Text == passwordConfirmTextBox.Text))
+            {
+                MessageBox.Show("Пароли должны совпадать", "Пароли не совпадают", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var user = new User() { 
+                Email = emailTextBox.Text,
+                FirstName = firstNameTextBox.Text,
+                LastName = lastNameTextBox.Text,
+                UserName = userNameTextBox.Text,
+                Password = passwordTextBox.Text,
+                Id = Guid.NewGuid().ToString(),
+            };
+
+            var context = new AppDbContext();
+
+            context.Users.Add(user);
+
+            context.SaveChanges();
+
+            Close();
         }
     }
 }
