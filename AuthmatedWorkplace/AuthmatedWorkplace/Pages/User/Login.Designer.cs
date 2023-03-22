@@ -1,4 +1,6 @@
-﻿namespace AuthmatedWorkplace
+﻿using MaterialSkin.Controls;
+
+namespace AuthmatedWorkplace
 {
     partial class Login
     {
@@ -28,77 +30,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            userNameLabel = new Label();
-            passwordLabel = new Label();
-            userNameTextBox = new TextBox();
-            passwordTextBox = new TextBox();
-            loginButton = new Button();
-            registerButton = new Button();
+            userNameTextBox = new MaterialTextBox2();
+            passwordTextBox = new MaterialTextBox2();
+            loginButton = new MaterialButton();
+            registerButton = new MaterialButton();
             SuspendLayout();
-            // 
-            // userNameLabel
-            // 
-            userNameLabel.AutoSize = true;
-            userNameLabel.Location = new Point(12, 15);
-            userNameLabel.Name = "userNameLabel";
-            userNameLabel.Size = new Size(59, 15);
-            userNameLabel.TabIndex = 0;
-            userNameLabel.Text = "username";
-            // 
-            // passwordLabel
-            // 
-            passwordLabel.AutoSize = true;
-            passwordLabel.Location = new Point(123, 15);
-            passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(57, 15);
-            passwordLabel.TabIndex = 1;
-            passwordLabel.Text = "password";
             // 
             // userNameTextBox
             // 
-            userNameTextBox.Location = new Point(12, 50);
+            userNameTextBox.AnimateReadOnly = false;
+            userNameTextBox.BackColor = Color.FromArgb(50, 50, 50);
+            userNameTextBox.BackgroundImageLayout = ImageLayout.None;
+            userNameTextBox.CharacterCasing = CharacterCasing.Normal;
+            userNameTextBox.Depth = 0;
+            userNameTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            userNameTextBox.HideSelection = true;
+            userNameTextBox.Hint = "UserName";
+            userNameTextBox.LeadingIcon = null;
+            userNameTextBox.Location = new Point(30, 89);
+            userNameTextBox.MaxLength = 32767;
+            userNameTextBox.MouseState = MaterialSkin.MouseState.OUT;
             userNameTextBox.Name = "userNameTextBox";
-            userNameTextBox.Size = new Size(100, 23);
+            userNameTextBox.PasswordChar = '\0';
+            userNameTextBox.PrefixSuffixText = null;
+            userNameTextBox.ReadOnly = false;
+            userNameTextBox.RightToLeft = RightToLeft.No;
+            userNameTextBox.SelectedText = "";
+            userNameTextBox.SelectionLength = 0;
+            userNameTextBox.SelectionStart = 0;
+            userNameTextBox.ShortcutsEnabled = true;
+            userNameTextBox.Size = new Size(275, 48);
             userNameTextBox.TabIndex = 2;
+            userNameTextBox.TabStop = false;
+            userNameTextBox.TextAlign = HorizontalAlignment.Left;
+            userNameTextBox.TrailingIcon = null;
+            userNameTextBox.UseSystemPasswordChar = false;
             // 
             // passwordTextBox
             // 
-            passwordTextBox.Location = new Point(123, 50);
+            passwordTextBox.AnimateReadOnly = false;
+            passwordTextBox.BackColor = Color.FromArgb(50, 50, 50);
+            passwordTextBox.BackgroundImageLayout = ImageLayout.None;
+            passwordTextBox.CharacterCasing = CharacterCasing.Normal;
+            passwordTextBox.Depth = 0;
+            passwordTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            passwordTextBox.HideSelection = true;
+            passwordTextBox.Hint = "Password";
+            passwordTextBox.LeadingIcon = null;
+            passwordTextBox.Location = new Point(30, 165);
+            passwordTextBox.MaxLength = 32767;
+            passwordTextBox.MouseState = MaterialSkin.MouseState.OUT;
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(100, 23);
+            passwordTextBox.PasswordChar = '\0';
+            passwordTextBox.PrefixSuffixText = null;
+            passwordTextBox.ReadOnly = false;
+            passwordTextBox.RightToLeft = RightToLeft.No;
+            passwordTextBox.SelectedText = "";
+            passwordTextBox.SelectionLength = 0;
+            passwordTextBox.SelectionStart = 0;
+            passwordTextBox.ShortcutsEnabled = true;
+            passwordTextBox.Size = new Size(275, 48);
             passwordTextBox.TabIndex = 3;
+            passwordTextBox.TabStop = false;
+            passwordTextBox.TextAlign = HorizontalAlignment.Left;
+            passwordTextBox.TrailingIcon = null;
+            passwordTextBox.UseSystemPasswordChar = false;
             // 
             // loginButton
             // 
-            loginButton.Location = new Point(12, 79);
+            loginButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            loginButton.BackColor = Color.FromArgb(50, 50, 50);
+            loginButton.Density = MaterialButton.MaterialButtonDensity.Default;
+            loginButton.Depth = 0;
+            loginButton.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            loginButton.ForeColor = Color.FromArgb(222, 255, 255, 255);
+            loginButton.HighEmphasis = true;
+            loginButton.Icon = null;
+            loginButton.Location = new Point(30, 234);
+            loginButton.Margin = new Padding(4, 6, 4, 6);
+            loginButton.MouseState = MaterialSkin.MouseState.HOVER;
             loginButton.Name = "loginButton";
-            loginButton.Size = new Size(100, 23);
+            loginButton.NoAccentTextColor = Color.Empty;
+            loginButton.Size = new Size(64, 36);
             loginButton.TabIndex = 4;
             loginButton.Text = "Login";
-            loginButton.UseVisualStyleBackColor = true;
+            loginButton.Type = MaterialButton.MaterialButtonType.Contained;
+            loginButton.UseAccentColor = false;
+            loginButton.UseVisualStyleBackColor = false;
             loginButton.Click += loginButton_Click;
             // 
             // registerButton
             // 
-            registerButton.Location = new Point(123, 79);
+            registerButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            registerButton.BackColor = Color.FromArgb(50, 50, 50);
+            registerButton.Density = MaterialButton.MaterialButtonDensity.Default;
+            registerButton.Depth = 0;
+            registerButton.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            registerButton.ForeColor = Color.FromArgb(222, 255, 255, 255);
+            registerButton.HighEmphasis = true;
+            registerButton.Icon = null;
+            registerButton.Location = new Point(123, 234);
+            registerButton.Margin = new Padding(4, 6, 4, 6);
+            registerButton.MouseState = MaterialSkin.MouseState.HOVER;
             registerButton.Name = "registerButton";
-            registerButton.Size = new Size(100, 23);
+            registerButton.NoAccentTextColor = Color.Empty;
+            registerButton.Size = new Size(89, 36);
             registerButton.TabIndex = 5;
             registerButton.Text = "Register";
-            registerButton.UseVisualStyleBackColor = true;
+            registerButton.Type = MaterialButton.MaterialButtonType.Contained;
+            registerButton.UseAccentColor = false;
+            registerButton.UseVisualStyleBackColor = false;
             registerButton.Click += registerButton_Click;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(236, 129);
+            ClientSize = new Size(332, 298);
             Controls.Add(registerButton);
             Controls.Add(loginButton);
             Controls.Add(passwordTextBox);
             Controls.Add(userNameTextBox);
-            Controls.Add(passwordLabel);
-            Controls.Add(userNameLabel);
             Name = "Login";
             Text = "Login";
             ResumeLayout(false);
@@ -106,12 +158,9 @@
         }
 
         #endregion
-
-        private Label userNameLabel;
-        private Label passwordLabel;
-        private TextBox userNameTextBox;
-        private TextBox passwordTextBox;
-        private Button loginButton;
-        private Button registerButton;
+        private MaterialTextBox2 userNameTextBox;
+        private MaterialTextBox2 passwordTextBox;
+        private MaterialButton loginButton;
+        private MaterialButton registerButton;
     }
 }

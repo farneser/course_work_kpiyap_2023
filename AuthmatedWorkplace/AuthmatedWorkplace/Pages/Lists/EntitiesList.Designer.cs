@@ -1,6 +1,6 @@
 ﻿namespace AuthmatedWorkplace
 {
-    partial class MainWindow
+    partial class EntitiesList
     {
         /// <summary>
         /// Required designer variable.
@@ -48,11 +48,12 @@
             entityDataGridView.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn, descriptionDataGridViewTextBoxColumn, numDataGridViewTextBoxColumn });
             entityDataGridView.DataSource = entityBindingSource;
             entityDataGridView.Dock = DockStyle.Fill;
-            entityDataGridView.Location = new Point(0, 0);
+            entityDataGridView.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            entityDataGridView.Location = new Point(3, 64);
             entityDataGridView.Name = "entityDataGridView";
             entityDataGridView.ReadOnly = true;
             entityDataGridView.RowTemplate.Height = 25;
-            entityDataGridView.Size = new Size(800, 450);
+            entityDataGridView.Size = new Size(794, 383);
             entityDataGridView.TabIndex = 0;
             entityDataGridView.CellContentClick += entityDataGridView_CellContentClick;
             // 

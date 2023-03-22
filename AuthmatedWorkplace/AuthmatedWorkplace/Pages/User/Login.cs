@@ -1,24 +1,16 @@
 ﻿using AuthmatedWorkplace.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using AuthmatedWorkplace.Pages;
+using MaterialSkin.Controls;
 
 namespace AuthmatedWorkplace
 {
-    public partial class Login : Form
+    public partial class Login : BaseForm
     {
-        public Login()
+        public Login() : base(new AppDbContext())
         {
             InitializeComponent();
 
-            this.Activated += AfterLoading;
+            Activated += AfterLoading;
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -26,11 +18,7 @@ namespace AuthmatedWorkplace
             var login = userNameTextBox.Text;
             var password = passwordTextBox.Text;
 
-            var context = new AppDbContext();
-
-            var user = context.Users.FirstOrDefault(u => u.UserName.ToLower() == login.ToLower() && u.Password == password);
-
-            user = new User() { Id = "idididid", UserName = "username" };
+            var user = _appDbContext.Users.FirstOrDefault(u => u.UserName.ToLower() == login.ToLower() && u.Password == password);
 
             if (user != null)
             {
@@ -39,10 +27,9 @@ namespace AuthmatedWorkplace
 
                 LoginSucces();
             }
-
             else
             {
-                MessageBox.Show("Неверный логин или пароль", "Ошибка входа", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MaterialMessageBox.Show("Неверный логин или пароль", "Ошибка входа", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -58,23 +45,29 @@ namespace AuthmatedWorkplace
 
         private void LoginSucces()
         {
-
             Hide();
-            
-            MessageBox.Show(Properties.Settings.Default.UserID, "Успешный вход");
 
-            var main = new MainWindow();
-            main.Closed += (s, args) => this.Close();
-            main.Show();
+            var res = MaterialMessageBox.Show("Вы успешно вошли в аккаунт", "Успешный вход", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
+            if (res == DialogResult.OK)
+            {
+                var main = new MainForm(_appDbContext);
+                main.Closed += (s, args) => this.Close();
+                main.Show();
+            }
+            else
+            {
+                Properties.Settings.Default.UserID = null;
+                Properties.Settings.Default.Save();
+                Show();
+            }
         }
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            var register = new Register();
+            var register = new Register(_appDbContext);
 
             register.ShowDialog();
-
         }
     }
 }

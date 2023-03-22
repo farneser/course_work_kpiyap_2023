@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 public sealed class AppDbContext : DbContext
 {
+    public string ConnectionString { get; set; } = "Data Source=app.db";
+
     public DbSet<Entity> Entities { get; set; }
     public DbSet<User> Users { get; set; }
 
@@ -11,8 +13,13 @@ public sealed class AppDbContext : DbContext
         Database.EnsureCreated();
     }
 
+    public AppDbContext(string connectionString) : base()
+    {
+        ConnectionString = connectionString;
+    }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=app.db");
+        optionsBuilder.UseSqlite(ConnectionString);
     }
 }

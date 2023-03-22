@@ -1,4 +1,5 @@
 ﻿using AuthmatedWorkplace.Data.Models;
+using AuthmatedWorkplace.Pages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,9 +13,9 @@ using static System.Windows.Forms.DataFormats;
 
 namespace AuthmatedWorkplace
 {
-    public partial class Register : Form
+    public partial class Register : BaseForm
     {
-        public Register()
+        public Register(AppDbContext context) : base(context)
         {
             InitializeComponent();
         }
@@ -27,7 +28,8 @@ namespace AuthmatedWorkplace
                 return;
             }
 
-            var user = new User() { 
+            var user = new User()
+            {
                 Email = emailTextBox.Text,
                 FirstName = firstNameTextBox.Text,
                 LastName = lastNameTextBox.Text,
@@ -42,6 +44,11 @@ namespace AuthmatedWorkplace
 
             context.SaveChanges();
 
+            Close();
+        }
+
+        private void canselButton_Click(object sender, EventArgs e)
+        {
             Close();
         }
     }

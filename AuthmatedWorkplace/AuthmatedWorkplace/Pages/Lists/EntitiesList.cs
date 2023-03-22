@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AuthmatedWorkplace.Pages;
+using MaterialSkin.Controls;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,11 +13,11 @@ using System.Windows.Forms;
 
 namespace AuthmatedWorkplace
 {
-    public partial class MainWindow : Form
+    public partial class EntitiesList : BaseForm
     {
         private AppDbContext? _context;
 
-        public MainWindow()
+        public EntitiesList()
         {
             InitializeComponent();
         }
@@ -31,7 +33,7 @@ namespace AuthmatedWorkplace
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var dialogResult = MessageBox.Show("Do You Want To Save Your Data", "CodeJuggler", MessageBoxButtons.YesNoCancel);
+            var dialogResult = MaterialMessageBox.Show("Do You Want To Save Your Data", "CodeJuggler", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
             if (dialogResult == DialogResult.Yes) this._context?.SaveChanges();
             else if (dialogResult == DialogResult.Cancel) e.Cancel = true;
         }
@@ -41,8 +43,8 @@ namespace AuthmatedWorkplace
 
             var x = entityDataGridView.CurrentRow.Index;
 
-            MessageBox.Show("any message");
-               
+            MaterialMessageBox.Show("any message");
+
         }
     }
 }
