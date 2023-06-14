@@ -94,13 +94,15 @@
             // 
             entityBindingSource.DataSource = typeof(Data.Models.Entity);
             // 
-            // MainWindow
+            // EntitiesList
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(entityDataGridView);
-            Name = "MainWindow";
+            Name = "EntitiesList";
+            Sizable = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Entities";
             FormClosing += MainWindow_FormClosing;
             Load += MainWindow_Load;

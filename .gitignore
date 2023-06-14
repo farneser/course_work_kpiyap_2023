@@ -1,4 +1,6 @@
 .vs/
+.idea/
+.git/
 AutomatedWorkplace/.vs/
 /AuthmatedWorkplace/AuthmatedWorkplace/AuthmatedWorkplace.csproj.user
 /AuthmatedWorkplace/AuthmatedWorkplace/obj

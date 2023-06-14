@@ -152,6 +152,8 @@ namespace AuthmatedWorkplace
             Controls.Add(passwordTextBox);
             Controls.Add(userNameTextBox);
             Name = "Login";
+            Sizable = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();

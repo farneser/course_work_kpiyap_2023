@@ -30,16 +30,16 @@
         {
             mainFormMenuStrip = new MenuStrip();
             applicationToolStripMenuItem = new ToolStripMenuItem();
+            logoutToolStripMenuItem = new ToolStripMenuItem();
+            exitToolStripMenuItem = new ToolStripMenuItem();
             themeToolStripMenuItem = new ToolStripMenuItem();
             colorToolStripMenuItem = new ToolStripMenuItem();
-            typeToolStripMenuItem = new ToolStripMenuItem();
             greenToolStripMenuItem = new ToolStripMenuItem();
             blueToolStripMenuItem = new ToolStripMenuItem();
             orangeToolStripMenuItem = new ToolStripMenuItem();
+            typeToolStripMenuItem = new ToolStripMenuItem();
             lightToolStripMenuItem = new ToolStripMenuItem();
             darkToolStripMenuItem = new ToolStripMenuItem();
-            logoutToolStripMenuItem = new ToolStripMenuItem();
-            exitToolStripMenuItem = new ToolStripMenuItem();
             mainFormMenuStrip.SuspendLayout();
             SuspendLayout();
             // 
@@ -62,6 +62,20 @@
             applicationToolStripMenuItem.Size = new Size(90, 21);
             applicationToolStripMenuItem.Text = "Application";
             // 
+            // logoutToolStripMenuItem
+            // 
+            logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            logoutToolStripMenuItem.Size = new Size(124, 22);
+            logoutToolStripMenuItem.Text = "Logout";
+            logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click;
+            // 
+            // exitToolStripMenuItem
+            // 
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(124, 22);
+            exitToolStripMenuItem.Text = "Exit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
+            // 
             // themeToolStripMenuItem
             // 
             themeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { colorToolStripMenuItem, typeToolStripMenuItem });
@@ -73,64 +87,50 @@
             // 
             colorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { greenToolStripMenuItem, blueToolStripMenuItem, orangeToolStripMenuItem });
             colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            colorToolStripMenuItem.Size = new Size(180, 22);
+            colorToolStripMenuItem.Size = new Size(112, 22);
             colorToolStripMenuItem.Text = "Color";
-            // 
-            // typeToolStripMenuItem
-            // 
-            typeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { lightToolStripMenuItem, darkToolStripMenuItem });
-            typeToolStripMenuItem.Name = "typeToolStripMenuItem";
-            typeToolStripMenuItem.Size = new Size(180, 22);
-            typeToolStripMenuItem.Text = "Type";
             // 
             // greenToolStripMenuItem
             // 
             greenToolStripMenuItem.Name = "greenToolStripMenuItem";
-            greenToolStripMenuItem.Size = new Size(180, 22);
+            greenToolStripMenuItem.Size = new Size(125, 22);
             greenToolStripMenuItem.Text = "Green";
             greenToolStripMenuItem.Click += greenToolStripMenuItem_Click;
             // 
             // blueToolStripMenuItem
             // 
             blueToolStripMenuItem.Name = "blueToolStripMenuItem";
-            blueToolStripMenuItem.Size = new Size(180, 22);
+            blueToolStripMenuItem.Size = new Size(125, 22);
             blueToolStripMenuItem.Text = "Blue";
             blueToolStripMenuItem.Click += blueToolStripMenuItem_Click;
             // 
             // orangeToolStripMenuItem
             // 
             orangeToolStripMenuItem.Name = "orangeToolStripMenuItem";
-            orangeToolStripMenuItem.Size = new Size(180, 22);
+            orangeToolStripMenuItem.Size = new Size(125, 22);
             orangeToolStripMenuItem.Text = "Orange";
             orangeToolStripMenuItem.Click += orangeToolStripMenuItem_Click;
+            // 
+            // typeToolStripMenuItem
+            // 
+            typeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { lightToolStripMenuItem, darkToolStripMenuItem });
+            typeToolStripMenuItem.Name = "typeToolStripMenuItem";
+            typeToolStripMenuItem.Size = new Size(112, 22);
+            typeToolStripMenuItem.Text = "Type";
             // 
             // lightToolStripMenuItem
             // 
             lightToolStripMenuItem.Name = "lightToolStripMenuItem";
-            lightToolStripMenuItem.Size = new Size(180, 22);
+            lightToolStripMenuItem.Size = new Size(111, 22);
             lightToolStripMenuItem.Text = "Light";
             lightToolStripMenuItem.Click += lightToolStripMenuItem_Click;
             // 
             // darkToolStripMenuItem
             // 
             darkToolStripMenuItem.Name = "darkToolStripMenuItem";
-            darkToolStripMenuItem.Size = new Size(180, 22);
+            darkToolStripMenuItem.Size = new Size(111, 22);
             darkToolStripMenuItem.Text = "Dark";
             darkToolStripMenuItem.Click += darkToolStripMenuItem_Click;
-            // 
-            // logoutToolStripMenuItem
-            // 
-            logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            logoutToolStripMenuItem.Size = new Size(180, 22);
-            logoutToolStripMenuItem.Text = "Logout";
-            logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click;
-            // 
-            // exitToolStripMenuItem
-            // 
-            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
-            exitToolStripMenuItem.Text = "Exit";
-            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // MainForm
             // 
@@ -140,6 +140,7 @@
             Controls.Add(mainFormMenuStrip);
             MainMenuStrip = mainFormMenuStrip;
             Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MainForm";
             mainFormMenuStrip.ResumeLayout(false);
             mainFormMenuStrip.PerformLayout();

@@ -17,7 +17,7 @@ namespace AuthmatedWorkplace
     {
         private AppDbContext? _context;
 
-        public EntitiesList()
+        public EntitiesList() : base(new AppDbContext())
         {
             InitializeComponent();
         }
