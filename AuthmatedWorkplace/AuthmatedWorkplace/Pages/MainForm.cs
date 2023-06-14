@@ -1,19 +1,16 @@
 ﻿using MaterialSkin;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using AuthmatedWorkplace.Data.Models;
+using AuthmatedWorkplace.Data.Forms;
 
 namespace AuthmatedWorkplace.Pages
 {
     public partial class MainForm : BaseForm
     {
+        public MainForm() : base(new AppDbContext())
+        {
+            InitializeComponent();
+        }
+
         public MainForm(AppDbContext context) : base(context)
         {
             InitializeComponent();
@@ -21,7 +18,7 @@ namespace AuthmatedWorkplace.Pages
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.UserID = null;
+            Properties.Settings.Default.UserID = Guid.Empty;
             Properties.Settings.Default.Save();
 
             Hide();
@@ -63,6 +60,20 @@ namespace AuthmatedWorkplace.Pages
         private void darkToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChangeThemeType(MaterialSkinManager.Themes.DARK);
+        }
+
+        private void createToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var create = new CreateEnitityForm(_appDbContext);
+            create.ShowDialog();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            foreach (var entity in _appDbContext.Entities.Where(e => e.UserId == Properties.Settings.Default.UserID))
+            {
+                dataFlowLayoutPanel.Controls.Add(new EntityPanel(entity));
+            }
         }
     }
 }

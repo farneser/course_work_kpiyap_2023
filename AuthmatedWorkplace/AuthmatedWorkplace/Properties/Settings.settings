@@ -1,12 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AuthmatedWorkplace.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="UserID" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="ThemeType" Type="MaterialSkin.MaterialSkinManager.Themes" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="UserID" Type="System.Guid" Scope="User">
+      <Value Profile="(Default)">00000000-0000-0000-0000-000000000000</Value>
     </Setting>
     <Setting Name="PrimaryColor" Type="MaterialSkin.Primary" Scope="User">
       <Value Profile="(Default)" />
@@ -26,6 +23,8 @@
     <Setting Name="Initial" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="ThemeType" Type="MaterialSkin.MaterialSkinManager.Themes" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
-

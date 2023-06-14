@@ -1,5 +1,6 @@
 ﻿using AuthmatedWorkplace.Data.Models;
 using AuthmatedWorkplace.Pages;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +25,7 @@ namespace AuthmatedWorkplace
         {
             if (!(passwordTextBox.Text == passwordConfirmTextBox.Text))
             {
-                MessageBox.Show("Пароли должны совпадать", "Пароли не совпадают", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MaterialMessageBox.Show("Пароли должны совпадать", "Пароли не совпадают", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -35,7 +36,6 @@ namespace AuthmatedWorkplace
                 LastName = lastNameTextBox.Text,
                 UserName = userNameTextBox.Text,
                 Password = passwordTextBox.Text,
-                Id = Guid.NewGuid().ToString(),
             };
 
             var context = new AppDbContext();

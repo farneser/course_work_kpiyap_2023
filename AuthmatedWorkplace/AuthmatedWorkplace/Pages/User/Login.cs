@@ -37,7 +37,7 @@ namespace AuthmatedWorkplace
         {
             this.Activated -= AfterLoading;
 
-            if (!string.IsNullOrEmpty(Properties.Settings.Default.UserID))
+            if (Properties.Settings.Default.UserID != Guid.Empty)
             {
                 LoginSucces();
             }
@@ -57,7 +57,7 @@ namespace AuthmatedWorkplace
             }
             else
             {
-                Properties.Settings.Default.UserID = null;
+                Properties.Settings.Default.UserID = Guid.Empty;
                 Properties.Settings.Default.Save();
                 Show();
             }
