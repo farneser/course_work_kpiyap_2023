@@ -1,6 +1,6 @@
 ﻿namespace AuthmatedWorkplace.Pages
 {
-    partial class CreateEnitityForm
+    partial class UpdateEnitityForm
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@
             typeRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
             typeRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
             numTextBox = new MaterialSkin.Controls.MaterialTextBox2();
-            createButton = new MaterialSkin.Controls.MaterialButton();
+            updateButton = new MaterialSkin.Controls.MaterialButton();
             dateTimePicker = new DateTimePicker();
             dateLabel = new MaterialSkin.Controls.MaterialLabel();
             SuspendLayout();
@@ -153,7 +153,7 @@
             numTextBox.SelectedText = "";
             numTextBox.SelectionLength = 0;
             numTextBox.SelectionStart = 0;
-            numTextBox.ShortcutsEnabled = false;
+            numTextBox.ShortcutsEnabled = true;
             numTextBox.Size = new Size(321, 48);
             numTextBox.TabIndex = 6;
             numTextBox.TabStop = false;
@@ -162,28 +162,28 @@
             numTextBox.UseSystemPasswordChar = false;
             numTextBox.KeyPress += numTextBox_KeyPress;
             // 
-            // createButton
+            // updateButton
             // 
-            createButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            createButton.BackColor = Color.FromArgb(50, 50, 50);
-            createButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            createButton.Depth = 0;
-            createButton.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            createButton.ForeColor = Color.FromArgb(222, 255, 255, 255);
-            createButton.HighEmphasis = true;
-            createButton.Icon = null;
-            createButton.Location = new Point(605, 224);
-            createButton.Margin = new Padding(4, 6, 4, 6);
-            createButton.MouseState = MaterialSkin.MouseState.HOVER;
-            createButton.Name = "createButton";
-            createButton.NoAccentTextColor = Color.Empty;
-            createButton.Size = new Size(76, 36);
-            createButton.TabIndex = 7;
-            createButton.Text = "Create";
-            createButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            createButton.UseAccentColor = false;
-            createButton.UseVisualStyleBackColor = false;
-            createButton.Click += createButton_Click;
+            updateButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            updateButton.BackColor = Color.FromArgb(50, 50, 50);
+            updateButton.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            updateButton.Depth = 0;
+            updateButton.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            updateButton.ForeColor = Color.FromArgb(222, 255, 255, 255);
+            updateButton.HighEmphasis = true;
+            updateButton.Icon = null;
+            updateButton.Location = new Point(605, 224);
+            updateButton.Margin = new Padding(4, 6, 4, 6);
+            updateButton.MouseState = MaterialSkin.MouseState.HOVER;
+            updateButton.Name = "updateButton";
+            updateButton.NoAccentTextColor = Color.Empty;
+            updateButton.Size = new Size(76, 36);
+            updateButton.TabIndex = 7;
+            updateButton.Text = "Update";
+            updateButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            updateButton.UseAccentColor = false;
+            updateButton.UseVisualStyleBackColor = false;
+            updateButton.Click += updateButton_Click;
             // 
             // dateTimePicker
             // 
@@ -206,21 +206,22 @@
             dateLabel.TabIndex = 9;
             dateLabel.Text = "Date";
             // 
-            // CreateEnitityForm
+            // UpdateEnitityForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(699, 278);
             Controls.Add(dateLabel);
             Controls.Add(dateTimePicker);
-            Controls.Add(createButton);
+            Controls.Add(updateButton);
             Controls.Add(numTextBox);
             Controls.Add(typeRadioButton2);
             Controls.Add(typeRadioButton1);
             Controls.Add(descriptionTextBox);
             Controls.Add(nameTextBox);
-            Name = "CreateEnitityForm";
-            Text = "CreateEnitityForm";
+            Name = "UpdateEnitityForm";
+            Text = "UpdateEnitityForm";
+            Load += UpdateEntityForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -232,7 +233,7 @@
         private MaterialSkin.Controls.MaterialRadioButton typeRadioButton1;
         private MaterialSkin.Controls.MaterialRadioButton typeRadioButton2;
         private MaterialSkin.Controls.MaterialTextBox2 numTextBox;
-        private MaterialSkin.Controls.MaterialButton createButton;
+        private MaterialSkin.Controls.MaterialButton updateButton;
         private DateTimePicker dateTimePicker;
         private MaterialSkin.Controls.MaterialLabel dateLabel;
     }

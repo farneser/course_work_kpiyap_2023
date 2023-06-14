@@ -1,6 +1,7 @@
 ﻿using MaterialSkin;
 using AuthmatedWorkplace.Data.Models;
 using AuthmatedWorkplace.Data.Forms;
+using MaterialSkin.Controls;
 
 namespace AuthmatedWorkplace.Pages
 {
@@ -66,14 +67,44 @@ namespace AuthmatedWorkplace.Pages
         {
             var create = new CreateEnitityForm(_appDbContext);
             create.ShowDialog();
+            RefreshData();
+        }
+
+        private void RefreshData()
+        {
+            dataFlowLayoutPanel.Controls.Clear();
+
+            foreach (var entity in _appDbContext.Entities.Where(e => e.UserId == Properties.Settings.Default.UserID))
+            {
+                var panel = new Panel() { Width = 750, Height = 100 };
+
+                panel.Click += (sender, e) =>
+                {
+                    var update = new UpdateEnitityForm(_appDbContext, entity);
+                    update.ShowDialog();
+                    RefreshData();
+                };
+
+                var deleteButton = new MaterialButton() { Text = "Delete", Location = new Point(500, 35) };
+               
+                deleteButton.Click += (sender, e) =>
+                {
+                    _appDbContext.Entities.Remove(entity);
+                    _appDbContext.SaveChanges();
+                    RefreshData();
+                };
+
+                panel.Controls.Add(new EntityPanel(entity));
+                panel.Controls.Add(deleteButton);
+
+
+                dataFlowLayoutPanel.Controls.Add(panel);
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            foreach (var entity in _appDbContext.Entities.Where(e => e.UserId == Properties.Settings.Default.UserID))
-            {
-                dataFlowLayoutPanel.Controls.Add(new EntityPanel(entity));
-            }
+            RefreshData();
         }
     }
 }
