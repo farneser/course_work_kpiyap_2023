@@ -37,7 +37,7 @@ namespace AuthmatedWorkplace
             passwordTextBox = new MaterialTextBox2();
             passwordConfirmTextBox = new MaterialTextBox2();
             registerButton = new MaterialButton();
-            canselButton = new MaterialButton();
+            cancelButton = new MaterialButton();
             SuspendLayout();
             // 
             // userNameTextBox
@@ -245,33 +245,33 @@ namespace AuthmatedWorkplace
             // 
             // canselButton
             // 
-            canselButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            canselButton.BackColor = Color.FromArgb(50, 50, 50);
-            canselButton.Density = MaterialButton.MaterialButtonDensity.Default;
-            canselButton.Depth = 0;
-            canselButton.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            canselButton.ForeColor = Color.FromArgb(222, 255, 255, 255);
-            canselButton.HighEmphasis = true;
-            canselButton.Icon = null;
-            canselButton.Location = new Point(145, 312);
-            canselButton.Margin = new Padding(4, 6, 4, 6);
-            canselButton.MouseState = MaterialSkin.MouseState.HOVER;
-            canselButton.Name = "canselButton";
-            canselButton.NoAccentTextColor = Color.Empty;
-            canselButton.Size = new Size(76, 36);
-            canselButton.TabIndex = 7;
-            canselButton.Text = "Cansel";
-            canselButton.Type = MaterialButton.MaterialButtonType.Contained;
-            canselButton.UseAccentColor = false;
-            canselButton.UseVisualStyleBackColor = false;
-            canselButton.Click += canselButton_Click;
+            cancelButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            cancelButton.BackColor = Color.FromArgb(50, 50, 50);
+            cancelButton.Density = MaterialButton.MaterialButtonDensity.Default;
+            cancelButton.Depth = 0;
+            cancelButton.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            cancelButton.ForeColor = Color.FromArgb(222, 255, 255, 255);
+            cancelButton.HighEmphasis = true;
+            cancelButton.Icon = null;
+            cancelButton.Location = new Point(145, 312);
+            cancelButton.Margin = new Padding(4, 6, 4, 6);
+            cancelButton.MouseState = MaterialSkin.MouseState.HOVER;
+            cancelButton.Name = "canselButton";
+            cancelButton.NoAccentTextColor = Color.Empty;
+            cancelButton.Size = new Size(76, 36);
+            cancelButton.TabIndex = 7;
+            cancelButton.Text = "Cancel";
+            cancelButton.Type = MaterialButton.MaterialButtonType.Contained;
+            cancelButton.UseAccentColor = false;
+            cancelButton.UseVisualStyleBackColor = false;
+            cancelButton.Click += cancelButton_Click;
             // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(720, 376);
-            Controls.Add(canselButton);
+            Controls.Add(cancelButton);
             Controls.Add(registerButton);
             Controls.Add(passwordConfirmTextBox);
             Controls.Add(passwordTextBox);
@@ -296,6 +296,6 @@ namespace AuthmatedWorkplace
         private MaterialTextBox2 passwordTextBox;
         private MaterialTextBox2 passwordConfirmTextBox;
         private MaterialButton registerButton;
-        private MaterialButton canselButton;
+        private MaterialButton cancelButton;
     }
 }
