@@ -39,7 +39,7 @@ namespace AuthmatedWorkplace
             // userNameTextBox
             // 
             userNameTextBox.AnimateReadOnly = false;
-            userNameTextBox.BackColor = Color.FromArgb(50, 50, 50);
+            userNameTextBox.BackColor = SystemColors.Control;
             userNameTextBox.BackgroundImageLayout = ImageLayout.None;
             userNameTextBox.CharacterCasing = CharacterCasing.Normal;
             userNameTextBox.Depth = 0;
@@ -69,7 +69,7 @@ namespace AuthmatedWorkplace
             // passwordTextBox
             // 
             passwordTextBox.AnimateReadOnly = false;
-            passwordTextBox.BackColor = Color.FromArgb(50, 50, 50);
+            passwordTextBox.BackColor = SystemColors.Control;
             passwordTextBox.BackgroundImageLayout = ImageLayout.None;
             passwordTextBox.CharacterCasing = CharacterCasing.Normal;
             passwordTextBox.Depth = 0;
@@ -81,7 +81,7 @@ namespace AuthmatedWorkplace
             passwordTextBox.MaxLength = 32767;
             passwordTextBox.MouseState = MaterialSkin.MouseState.OUT;
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.PasswordChar = '\0';
+            passwordTextBox.PasswordChar = '●';
             passwordTextBox.PrefixSuffixText = null;
             passwordTextBox.ReadOnly = false;
             passwordTextBox.RightToLeft = RightToLeft.No;
@@ -94,7 +94,7 @@ namespace AuthmatedWorkplace
             passwordTextBox.TabStop = false;
             passwordTextBox.TextAlign = HorizontalAlignment.Left;
             passwordTextBox.TrailingIcon = null;
-            passwordTextBox.UseSystemPasswordChar = false;
+            passwordTextBox.UseSystemPasswordChar = true;
             // 
             // loginButton
             // 
@@ -152,6 +152,8 @@ namespace AuthmatedWorkplace
             Controls.Add(passwordTextBox);
             Controls.Add(userNameTextBox);
             Name = "Login";
+            Sizable = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();

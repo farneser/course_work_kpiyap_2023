@@ -280,6 +280,8 @@ namespace AuthmatedWorkplace
             Controls.Add(firstNameTextBox);
             Controls.Add(userNameTextBox);
             Name = "Register";
+            Sizable = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Register";
             ResumeLayout(false);
             PerformLayout();

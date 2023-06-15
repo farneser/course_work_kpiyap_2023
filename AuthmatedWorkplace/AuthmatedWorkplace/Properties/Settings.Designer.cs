@@ -25,13 +25,91 @@ namespace AuthmatedWorkplace.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string UserID {
+        [global::System.Configuration.DefaultSettingValueAttribute("00000000-0000-0000-0000-000000000000")]
+        public global::System.Guid UserID {
             get {
-                return ((string)(this["UserID"]));
+                return ((global::System.Guid)(this["UserID"]));
             }
             set {
                 this["UserID"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::MaterialSkin.Primary PrimaryColor {
+            get {
+                return ((global::MaterialSkin.Primary)(this["PrimaryColor"]));
+            }
+            set {
+                this["PrimaryColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::MaterialSkin.Primary DarkPrimaryColor {
+            get {
+                return ((global::MaterialSkin.Primary)(this["DarkPrimaryColor"]));
+            }
+            set {
+                this["DarkPrimaryColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::MaterialSkin.Primary LightPrimaryColor {
+            get {
+                return ((global::MaterialSkin.Primary)(this["LightPrimaryColor"]));
+            }
+            set {
+                this["LightPrimaryColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::MaterialSkin.Accent AccentColor {
+            get {
+                return ((global::MaterialSkin.Accent)(this["AccentColor"]));
+            }
+            set {
+                this["AccentColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::MaterialSkin.TextShade TextShadeColor {
+            get {
+                return ((global::MaterialSkin.TextShade)(this["TextShadeColor"]));
+            }
+            set {
+                this["TextShadeColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Initial {
+            get {
+                return ((bool)(this["Initial"]));
+            }
+            set {
+                this["Initial"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::MaterialSkin.MaterialSkinManager.Themes ThemeType {
+            get {
+                return ((global::MaterialSkin.MaterialSkinManager.Themes)(this["ThemeType"]));
+            }
+            set {
+                this["ThemeType"] = value;
             }
         }
     }
