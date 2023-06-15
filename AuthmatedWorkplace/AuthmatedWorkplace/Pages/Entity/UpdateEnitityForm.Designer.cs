@@ -1,4 +1,6 @@
-﻿namespace AuthmatedWorkplace.Pages
+﻿using AuthmatedWorkplace.Data;
+
+namespace AuthmatedWorkplace.Pages
 {
     partial class UpdateEnitityForm
     {
@@ -47,7 +49,7 @@
             nameTextBox.Depth = 0;
             nameTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             nameTextBox.HideSelection = true;
-            nameTextBox.Hint = "Name";
+            nameTextBox.Hint = Constants.Name;
             nameTextBox.LeadingIcon = null;
             nameTextBox.Location = new Point(19, 83);
             nameTextBox.MaxLength = 32767;
@@ -77,7 +79,7 @@
             descriptionTextBox.Depth = 0;
             descriptionTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             descriptionTextBox.HideSelection = true;
-            descriptionTextBox.Hint = "Description";
+            descriptionTextBox.Hint = Constants.Description;
             descriptionTextBox.LeadingIcon = null;
             descriptionTextBox.Location = new Point(19, 156);
             descriptionTextBox.MaxLength = 32767;
@@ -112,7 +114,7 @@
             typeRadioButton1.Size = new Size(100, 37);
             typeRadioButton1.TabIndex = 4;
             typeRadioButton1.TabStop = true;
-            typeRadioButton1.Text = "First type";
+            typeRadioButton1.Text = Constants.TypeOne;
             typeRadioButton1.UseVisualStyleBackColor = true;
             // 
             // typeRadioButton2
@@ -128,7 +130,7 @@
             typeRadioButton2.Size = new Size(122, 37);
             typeRadioButton2.TabIndex = 5;
             typeRadioButton2.TabStop = true;
-            typeRadioButton2.Text = "Second type";
+            typeRadioButton2.Text = Constants.TypeTwo;
             typeRadioButton2.UseVisualStyleBackColor = true;
             // 
             // numTextBox
@@ -140,7 +142,7 @@
             numTextBox.Depth = 0;
             numTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             numTextBox.HideSelection = true;
-            numTextBox.Hint = "Number";
+            numTextBox.Hint = Constants.Num;
             numTextBox.LeadingIcon = null;
             numTextBox.Location = new Point(360, 156);
             numTextBox.MaxLength = 32767;
@@ -206,7 +208,7 @@
             dateLabel.Name = "dateLabel";
             dateLabel.Size = new Size(34, 19);
             dateLabel.TabIndex = 9;
-            dateLabel.Text = "Date";
+            dateLabel.Text = Constants.Date;
             // 
             // UpdateEnitityForm
             // 
@@ -222,7 +224,7 @@
             Controls.Add(descriptionTextBox);
             Controls.Add(nameTextBox);
             Name = "UpdateEnitityForm";
-            Text = "UpdateEnitityForm";
+            Text = $"Update";
             Load += UpdateEntityForm_Load;
             ResumeLayout(false);
             PerformLayout();

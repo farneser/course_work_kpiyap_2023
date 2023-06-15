@@ -104,6 +104,7 @@ namespace AuthmatedWorkplace.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public global::MaterialSkin.MaterialSkinManager.Themes ThemeType {
             get {
                 return ((global::MaterialSkin.MaterialSkinManager.Themes)(this["ThemeType"]));

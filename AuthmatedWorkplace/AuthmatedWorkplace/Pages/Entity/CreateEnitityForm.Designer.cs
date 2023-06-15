@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using AuthmatedWorkplace.Data;
+using System.Windows.Forms;
 
 namespace AuthmatedWorkplace.Pages
 {
@@ -49,7 +50,7 @@ namespace AuthmatedWorkplace.Pages
             nameTextBox.Depth = 0;
             nameTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             nameTextBox.HideSelection = true;
-            nameTextBox.Hint = "Name";
+            nameTextBox.Hint = Constants.Name;
             nameTextBox.LeadingIcon = null;
             nameTextBox.Location = new Point(19, 83);
             nameTextBox.MaxLength = 32767;
@@ -79,7 +80,7 @@ namespace AuthmatedWorkplace.Pages
             descriptionTextBox.Depth = 0;
             descriptionTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             descriptionTextBox.HideSelection = true;
-            descriptionTextBox.Hint = "Description";
+            descriptionTextBox.Hint = Constants.Description;
             descriptionTextBox.LeadingIcon = null;
             descriptionTextBox.Location = new Point(19, 156);
             descriptionTextBox.MaxLength = 32767;
@@ -114,7 +115,7 @@ namespace AuthmatedWorkplace.Pages
             typeRadioButton1.Size = new Size(100, 37);
             typeRadioButton1.TabIndex = 4;
             typeRadioButton1.TabStop = true;
-            typeRadioButton1.Text = "First type";
+            typeRadioButton1.Text = Constants.TypeOne;
             typeRadioButton1.UseVisualStyleBackColor = true;
             // 
             // typeRadioButton2
@@ -130,7 +131,7 @@ namespace AuthmatedWorkplace.Pages
             typeRadioButton2.Size = new Size(122, 37);
             typeRadioButton2.TabIndex = 5;
             typeRadioButton2.TabStop = true;
-            typeRadioButton2.Text = "Second type";
+            typeRadioButton2.Text = Constants.TypeTwo;
             typeRadioButton2.UseVisualStyleBackColor = true;
             // 
             // numTextBox
@@ -142,7 +143,7 @@ namespace AuthmatedWorkplace.Pages
             numTextBox.Depth = 0;
             numTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             numTextBox.HideSelection = true;
-            numTextBox.Hint = "Number";
+            numTextBox.Hint = Constants.Num;
             numTextBox.LeadingIcon = null;
             numTextBox.Location = new Point(360, 156);
             numTextBox.MaxLength = 32767;
@@ -224,7 +225,7 @@ namespace AuthmatedWorkplace.Pages
             Controls.Add(descriptionTextBox);
             Controls.Add(nameTextBox);
             Name = "CreateEnitityForm";
-            Text = "CreateEnitityForm";
+            Text = "Create";
             ResumeLayout(false);
             PerformLayout();
         }

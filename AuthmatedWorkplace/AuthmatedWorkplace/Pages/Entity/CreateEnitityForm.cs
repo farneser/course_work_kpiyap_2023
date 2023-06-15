@@ -1,10 +1,13 @@
-﻿namespace AuthmatedWorkplace.Pages
+﻿using AuthmatedWorkplace.Data;
+
+namespace AuthmatedWorkplace.Pages
 {
     public partial class CreateEnitityForm : BaseForm
     {
         public CreateEnitityForm(AppDbContext context) : base(context)
         {
             InitializeComponent();
+            Text = $"Create {Constants.EntityName} form";
         }
 
         private void numTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -28,6 +31,7 @@
             });
 
             _appDbContext.SaveChanges();
+            Close();
         }
     }
 }

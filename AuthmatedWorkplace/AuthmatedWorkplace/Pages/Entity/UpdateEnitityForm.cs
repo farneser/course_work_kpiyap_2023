@@ -1,4 +1,5 @@
-﻿using AuthmatedWorkplace.Data.Models;
+﻿using AuthmatedWorkplace.Data;
+using AuthmatedWorkplace.Data.Models;
 using MaterialSkin.Controls;
 
 namespace AuthmatedWorkplace.Pages
@@ -11,6 +12,7 @@ namespace AuthmatedWorkplace.Pages
         {
             InitializeComponent();
             _entity = entity;
+            Text = $"Update {Constants.EntityName} form";
         }
 
         private void numTextBox_KeyPress(object sender, KeyPressEventArgs e)

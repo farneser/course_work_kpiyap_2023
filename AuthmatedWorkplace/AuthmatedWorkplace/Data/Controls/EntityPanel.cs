@@ -34,7 +34,7 @@ namespace AuthmatedWorkplace.Data.Forms
 
             var typeLabel = new MaterialLabel()
             {
-                Text = entity.Type.ToString(),
+                Text = entity.Type ? Constants.TypeOne : Constants.TypeTwo,
                 Size = new Size(100, 20),
                 Location = new Point(300, 50)
             };
