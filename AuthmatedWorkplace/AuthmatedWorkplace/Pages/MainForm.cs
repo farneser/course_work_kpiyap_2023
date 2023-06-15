@@ -63,13 +63,6 @@ namespace AuthmatedWorkplace.Pages
             ChangeThemeType(MaterialSkinManager.Themes.DARK);
         }
 
-        private void createToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var create = new CreateEnitityForm(_appDbContext);
-            create.ShowDialog();
-            RefreshData();
-        }
-
         private void RefreshData()
         {
             dataFlowLayoutPanel.Controls.Clear();
@@ -78,16 +71,18 @@ namespace AuthmatedWorkplace.Pages
             {
                 var panel = new Panel() { Width = 750, Height = 100 };
 
-                panel.Click += (sender, e) =>
+                var updateButton = new MaterialButton() { Text = "Update", Location = new Point(500, 35) };
+
+                updateButton.Click += (s, e) =>
                 {
                     var update = new UpdateEnitityForm(_appDbContext, entity);
                     update.ShowDialog();
                     RefreshData();
                 };
 
-                var deleteButton = new MaterialButton() { Text = "Delete", Location = new Point(500, 35) };
-               
-                deleteButton.Click += (sender, e) =>
+                var deleteButton = new MaterialButton() { Text = "Delete", Location = new Point(600, 35) };
+
+                deleteButton.Click += (s, e) =>
                 {
                     _appDbContext.Entities.Remove(entity);
                     _appDbContext.SaveChanges();
@@ -95,6 +90,7 @@ namespace AuthmatedWorkplace.Pages
                 };
 
                 panel.Controls.Add(new EntityPanel(entity));
+                panel.Controls.Add(updateButton);
                 panel.Controls.Add(deleteButton);
 
 
@@ -103,6 +99,18 @@ namespace AuthmatedWorkplace.Pages
         }
 
         private void MainForm_Load(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void createToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            var create = new CreateEnitityForm(_appDbContext);
+            create.ShowDialog();
+            RefreshData();
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RefreshData();
         }

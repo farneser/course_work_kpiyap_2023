@@ -1,4 +1,6 @@
-﻿namespace AuthmatedWorkplace.Pages
+﻿using System.Windows.Forms;
+
+namespace AuthmatedWorkplace.Pages
 {
     partial class CreateEnitityForm
     {
@@ -193,6 +195,8 @@
             dateTimePicker.Name = "dateTimePicker";
             dateTimePicker.Size = new Size(321, 23);
             dateTimePicker.TabIndex = 8;
+            dateTimePicker.Format = DateTimePickerFormat.Custom;
+            dateTimePicker.CustomFormat = "MM/dd/yyyy hh:mm:ss";
             // 
             // dateLabel
             // 

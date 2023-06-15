@@ -40,8 +40,10 @@
             typeToolStripMenuItem = new ToolStripMenuItem();
             lightToolStripMenuItem = new ToolStripMenuItem();
             darkToolStripMenuItem = new ToolStripMenuItem();
+            dataToolStripMenuItem = new ToolStripMenuItem();
             createToolStripMenuItem = new ToolStripMenuItem();
             dataFlowLayoutPanel = new FlowLayoutPanel();
+            refreshToolStripMenuItem = new ToolStripMenuItem();
             mainFormMenuStrip.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,7 +52,7 @@
             mainFormMenuStrip.BackColor = Color.FromArgb(50, 50, 50);
             mainFormMenuStrip.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             mainFormMenuStrip.ForeColor = Color.FromArgb(222, 255, 255, 255);
-            mainFormMenuStrip.Items.AddRange(new ToolStripItem[] { applicationToolStripMenuItem, themeToolStripMenuItem, createToolStripMenuItem });
+            mainFormMenuStrip.Items.AddRange(new ToolStripItem[] { applicationToolStripMenuItem, themeToolStripMenuItem, dataToolStripMenuItem });
             mainFormMenuStrip.Location = new Point(3, 64);
             mainFormMenuStrip.Name = "mainFormMenuStrip";
             mainFormMenuStrip.Size = new Size(794, 25);
@@ -134,12 +136,19 @@
             darkToolStripMenuItem.Text = "Dark";
             darkToolStripMenuItem.Click += darkToolStripMenuItem_Click;
             // 
+            // dataToolStripMenuItem
+            // 
+            dataToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createToolStripMenuItem, refreshToolStripMenuItem });
+            dataToolStripMenuItem.Name = "dataToolStripMenuItem";
+            dataToolStripMenuItem.Size = new Size(50, 21);
+            dataToolStripMenuItem.Text = "Data";
+            // 
             // createToolStripMenuItem
             // 
             createToolStripMenuItem.Name = "createToolStripMenuItem";
-            createToolStripMenuItem.Size = new Size(62, 21);
+            createToolStripMenuItem.Size = new Size(180, 22);
             createToolStripMenuItem.Text = "Create";
-            createToolStripMenuItem.Click += createToolStripMenuItem_Click;
+            createToolStripMenuItem.Click += createToolStripMenuItem_Click_1;
             // 
             // dataFlowLayoutPanel
             // 
@@ -148,6 +157,13 @@
             dataFlowLayoutPanel.Name = "dataFlowLayoutPanel";
             dataFlowLayoutPanel.Size = new Size(788, 352);
             dataFlowLayoutPanel.TabIndex = 1;
+            // 
+            // refreshToolStripMenuItem
+            // 
+            refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            refreshToolStripMenuItem.Size = new Size(180, 22);
+            refreshToolStripMenuItem.Text = "Refresh";
+            refreshToolStripMenuItem.Click += refreshToolStripMenuItem_Click;
             // 
             // MainForm
             // 
@@ -182,6 +198,8 @@
         private ToolStripMenuItem lightToolStripMenuItem;
         private ToolStripMenuItem darkToolStripMenuItem;
         private FlowLayoutPanel dataFlowLayoutPanel;
+        private ToolStripMenuItem dataToolStripMenuItem;
         private ToolStripMenuItem createToolStripMenuItem;
+        private ToolStripMenuItem refreshToolStripMenuItem;
     }
 }
