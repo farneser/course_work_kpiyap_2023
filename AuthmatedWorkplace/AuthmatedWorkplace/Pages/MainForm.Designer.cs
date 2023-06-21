@@ -199,7 +199,7 @@ namespace AuthmatedWorkplace.Pages
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new Size(43, 19);
             nameLabel.TabIndex = 3;
-            nameLabel.Text = "Name";
+            nameLabel.Text = Constants.Name;
             // 
             // descriptionLabel
             // 
@@ -212,7 +212,7 @@ namespace AuthmatedWorkplace.Pages
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new Size(81, 19);
             descriptionLabel.TabIndex = 4;
-            descriptionLabel.Text = "Description";
+            descriptionLabel.Text = Constants.Description;
             // 
             // numLabel
             // 
@@ -225,7 +225,7 @@ namespace AuthmatedWorkplace.Pages
             numLabel.Name = "numLabel";
             numLabel.Size = new Size(35, 19);
             numLabel.TabIndex = 5;
-            numLabel.Text = "Num";
+            numLabel.Text = Constants.Num;
             // 
             // typeLabel
             // 
@@ -251,7 +251,7 @@ namespace AuthmatedWorkplace.Pages
             dateLabel.Name = "dateLabel";
             dateLabel.Size = new Size(34, 19);
             dateLabel.TabIndex = 7;
-            dateLabel.Text = "Date";
+            dateLabel.Text = Constants.Date;
             // 
             // MainForm
             // 
