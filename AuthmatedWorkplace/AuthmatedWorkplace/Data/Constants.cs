@@ -8,13 +8,13 @@ namespace AuthmatedWorkplace.Data
 {
     public static class Constants
     {
-        public static string Name = "Name";
-        public static string Description = "Description";
-        public static string Num = "Num";
-        public static string TypeOne = "First type";
-        public static string TypeTwo = "Second type";
-        public static string Date = "Date";
+        public static string Name = "Предмет";
+        public static string Description = "Описание";
+        public static string Num = "Часы";
+        public static string TypeOne = "Обычное";
+        public static string TypeTwo = "Лабораторная";
+        public static string Date = "Дата занятия";
 
-        public static string EntityName = "Entity";
+        public static string EntityName = "Занятие";
     }
 }

@@ -45,7 +45,7 @@ namespace AuthmatedWorkplace
             userNameTextBox.Depth = 0;
             userNameTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             userNameTextBox.HideSelection = true;
-            userNameTextBox.Hint = "UserName";
+            userNameTextBox.Hint = "Логин пользователя";
             userNameTextBox.LeadingIcon = null;
             userNameTextBox.Location = new Point(30, 89);
             userNameTextBox.MaxLength = 32767;
@@ -75,7 +75,7 @@ namespace AuthmatedWorkplace
             passwordTextBox.Depth = 0;
             passwordTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             passwordTextBox.HideSelection = true;
-            passwordTextBox.Hint = "Password";
+            passwordTextBox.Hint = "Пароль";
             passwordTextBox.LeadingIcon = null;
             passwordTextBox.Location = new Point(30, 165);
             passwordTextBox.MaxLength = 32767;
@@ -113,7 +113,7 @@ namespace AuthmatedWorkplace
             loginButton.NoAccentTextColor = Color.Empty;
             loginButton.Size = new Size(64, 36);
             loginButton.TabIndex = 4;
-            loginButton.Text = "Login";
+            loginButton.Text = "Вход";
             loginButton.Type = MaterialButton.MaterialButtonType.Contained;
             loginButton.UseAccentColor = false;
             loginButton.UseVisualStyleBackColor = false;
@@ -129,14 +129,14 @@ namespace AuthmatedWorkplace
             registerButton.ForeColor = Color.FromArgb(222, 255, 255, 255);
             registerButton.HighEmphasis = true;
             registerButton.Icon = null;
-            registerButton.Location = new Point(123, 234);
+            registerButton.Location = new Point(102, 234);
             registerButton.Margin = new Padding(4, 6, 4, 6);
             registerButton.MouseState = MaterialSkin.MouseState.HOVER;
             registerButton.Name = "registerButton";
             registerButton.NoAccentTextColor = Color.Empty;
-            registerButton.Size = new Size(89, 36);
+            registerButton.Size = new Size(126, 36);
             registerButton.TabIndex = 5;
-            registerButton.Text = "Register";
+            registerButton.Text = "Регистрация";
             registerButton.Type = MaterialButton.MaterialButtonType.Contained;
             registerButton.UseAccentColor = false;
             registerButton.UseVisualStyleBackColor = false;
@@ -154,7 +154,7 @@ namespace AuthmatedWorkplace
             Name = "Login";
             Sizable = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Login";
+            Text = "Вход";
             ResumeLayout(false);
             PerformLayout();
         }

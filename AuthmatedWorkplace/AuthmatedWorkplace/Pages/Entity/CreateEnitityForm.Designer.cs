@@ -50,7 +50,7 @@ namespace AuthmatedWorkplace.Pages
             nameTextBox.Depth = 0;
             nameTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             nameTextBox.HideSelection = true;
-            nameTextBox.Hint = Constants.Name;
+            nameTextBox.Hint = "Предмет";
             nameTextBox.LeadingIcon = null;
             nameTextBox.Location = new Point(19, 83);
             nameTextBox.MaxLength = 32767;
@@ -80,7 +80,7 @@ namespace AuthmatedWorkplace.Pages
             descriptionTextBox.Depth = 0;
             descriptionTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             descriptionTextBox.HideSelection = true;
-            descriptionTextBox.Hint = Constants.Description;
+            descriptionTextBox.Hint = "Описание";
             descriptionTextBox.LeadingIcon = null;
             descriptionTextBox.Location = new Point(19, 156);
             descriptionTextBox.MaxLength = 32767;
@@ -112,10 +112,10 @@ namespace AuthmatedWorkplace.Pages
             typeRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
             typeRadioButton1.Name = "typeRadioButton1";
             typeRadioButton1.Ripple = true;
-            typeRadioButton1.Size = new Size(100, 37);
+            typeRadioButton1.Size = new Size(102, 37);
             typeRadioButton1.TabIndex = 4;
             typeRadioButton1.TabStop = true;
-            typeRadioButton1.Text = Constants.TypeOne;
+            typeRadioButton1.Text = "Обычное";
             typeRadioButton1.UseVisualStyleBackColor = true;
             // 
             // typeRadioButton2
@@ -128,10 +128,10 @@ namespace AuthmatedWorkplace.Pages
             typeRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
             typeRadioButton2.Name = "typeRadioButton2";
             typeRadioButton2.Ripple = true;
-            typeRadioButton2.Size = new Size(122, 37);
+            typeRadioButton2.Size = new Size(144, 37);
             typeRadioButton2.TabIndex = 5;
             typeRadioButton2.TabStop = true;
-            typeRadioButton2.Text = Constants.TypeTwo;
+            typeRadioButton2.Text = "Лабораторная";
             typeRadioButton2.UseVisualStyleBackColor = true;
             // 
             // numTextBox
@@ -143,7 +143,7 @@ namespace AuthmatedWorkplace.Pages
             numTextBox.Depth = 0;
             numTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             numTextBox.HideSelection = true;
-            numTextBox.Hint = Constants.Num;
+            numTextBox.Hint = "Часы";
             numTextBox.LeadingIcon = null;
             numTextBox.Location = new Point(360, 156);
             numTextBox.MaxLength = 32767;
@@ -190,14 +190,14 @@ namespace AuthmatedWorkplace.Pages
             // 
             // dateTimePicker
             // 
+            dateTimePicker.CustomFormat = "MM/dd/yyyy hh:mm:ss";
             dateTimePicker.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            dateTimePicker.Location = new Point(66, 229);
+            dateTimePicker.Format = DateTimePickerFormat.Custom;
+            dateTimePicker.Location = new Point(136, 229);
             dateTimePicker.Margin = new Padding(10);
             dateTimePicker.Name = "dateTimePicker";
             dateTimePicker.Size = new Size(321, 23);
             dateTimePicker.TabIndex = 8;
-            dateTimePicker.Format = DateTimePickerFormat.Custom;
-            dateTimePicker.CustomFormat = "MM/dd/yyyy hh:mm:ss";
             // 
             // dateLabel
             // 
@@ -207,9 +207,9 @@ namespace AuthmatedWorkplace.Pages
             dateLabel.Location = new Point(19, 229);
             dateLabel.MouseState = MaterialSkin.MouseState.HOVER;
             dateLabel.Name = "dateLabel";
-            dateLabel.Size = new Size(34, 19);
+            dateLabel.Size = new Size(104, 19);
             dateLabel.TabIndex = 9;
-            dateLabel.Text = "Date";
+            dateLabel.Text = "Дата занятия";
             // 
             // CreateEnitityForm
             // 
@@ -225,7 +225,7 @@ namespace AuthmatedWorkplace.Pages
             Controls.Add(descriptionTextBox);
             Controls.Add(nameTextBox);
             Name = "CreateEnitityForm";
-            Text = "Create";
+            Text = $"Форма создание занятия";
             ResumeLayout(false);
             PerformLayout();
         }

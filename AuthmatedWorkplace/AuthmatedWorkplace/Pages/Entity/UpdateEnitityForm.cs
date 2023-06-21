@@ -12,7 +12,6 @@ namespace AuthmatedWorkplace.Pages
         {
             InitializeComponent();
             _entity = entity;
-            Text = $"Update {Constants.EntityName} form";
         }
 
         private void numTextBox_KeyPress(object sender, KeyPressEventArgs e)

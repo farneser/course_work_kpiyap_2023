@@ -7,7 +7,6 @@ namespace AuthmatedWorkplace.Pages
         public CreateEnitityForm(AppDbContext context) : base(context)
         {
             InitializeComponent();
-            Text = $"Create {Constants.EntityName} form";
         }
 
         private void numTextBox_KeyPress(object sender, KeyPressEventArgs e)

@@ -43,13 +43,13 @@ namespace AuthmatedWorkplace
             // userNameTextBox
             // 
             userNameTextBox.AnimateReadOnly = false;
-            userNameTextBox.BackColor = Color.FromArgb(50, 50, 50);
+            userNameTextBox.BackColor = SystemColors.Control;
             userNameTextBox.BackgroundImageLayout = ImageLayout.None;
             userNameTextBox.CharacterCasing = CharacterCasing.Normal;
             userNameTextBox.Depth = 0;
             userNameTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             userNameTextBox.HideSelection = true;
-            userNameTextBox.Hint = "UserName";
+            userNameTextBox.Hint = "Логин пользователя";
             userNameTextBox.LeadingIcon = null;
             userNameTextBox.Location = new Point(26, 90);
             userNameTextBox.MaxLength = 32767;
@@ -73,13 +73,13 @@ namespace AuthmatedWorkplace
             // firstNameTextBox
             // 
             firstNameTextBox.AnimateReadOnly = false;
-            firstNameTextBox.BackColor = Color.FromArgb(50, 50, 50);
+            firstNameTextBox.BackColor = SystemColors.Control;
             firstNameTextBox.BackgroundImageLayout = ImageLayout.None;
             firstNameTextBox.CharacterCasing = CharacterCasing.Normal;
             firstNameTextBox.Depth = 0;
             firstNameTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             firstNameTextBox.HideSelection = true;
-            firstNameTextBox.Hint = "First name";
+            firstNameTextBox.Hint = "Имя пользователя";
             firstNameTextBox.LeadingIcon = null;
             firstNameTextBox.Location = new Point(26, 163);
             firstNameTextBox.MaxLength = 32767;
@@ -103,13 +103,13 @@ namespace AuthmatedWorkplace
             // lastNameTextBox
             // 
             lastNameTextBox.AnimateReadOnly = false;
-            lastNameTextBox.BackColor = Color.FromArgb(50, 50, 50);
+            lastNameTextBox.BackColor = SystemColors.Control;
             lastNameTextBox.BackgroundImageLayout = ImageLayout.None;
             lastNameTextBox.CharacterCasing = CharacterCasing.Normal;
             lastNameTextBox.Depth = 0;
             lastNameTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             lastNameTextBox.HideSelection = true;
-            lastNameTextBox.Hint = "Last name";
+            lastNameTextBox.Hint = "Фамилия пользователя";
             lastNameTextBox.LeadingIcon = null;
             lastNameTextBox.Location = new Point(372, 163);
             lastNameTextBox.MaxLength = 32767;
@@ -133,13 +133,13 @@ namespace AuthmatedWorkplace
             // emailTextBox
             // 
             emailTextBox.AnimateReadOnly = false;
-            emailTextBox.BackColor = Color.FromArgb(50, 50, 50);
+            emailTextBox.BackColor = SystemColors.Control;
             emailTextBox.BackgroundImageLayout = ImageLayout.None;
             emailTextBox.CharacterCasing = CharacterCasing.Normal;
             emailTextBox.Depth = 0;
             emailTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             emailTextBox.HideSelection = true;
-            emailTextBox.Hint = "Email";
+            emailTextBox.Hint = "Электронная почта пользователя";
             emailTextBox.LeadingIcon = null;
             emailTextBox.Location = new Point(372, 90);
             emailTextBox.MaxLength = 32767;
@@ -163,13 +163,13 @@ namespace AuthmatedWorkplace
             // passwordTextBox
             // 
             passwordTextBox.AnimateReadOnly = false;
-            passwordTextBox.BackColor = Color.FromArgb(50, 50, 50);
+            passwordTextBox.BackColor = SystemColors.Control;
             passwordTextBox.BackgroundImageLayout = ImageLayout.None;
             passwordTextBox.CharacterCasing = CharacterCasing.Normal;
             passwordTextBox.Depth = 0;
             passwordTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             passwordTextBox.HideSelection = true;
-            passwordTextBox.Hint = "Password";
+            passwordTextBox.Hint = "Пароль";
             passwordTextBox.LeadingIcon = null;
             passwordTextBox.Location = new Point(26, 239);
             passwordTextBox.MaxLength = 32767;
@@ -193,13 +193,13 @@ namespace AuthmatedWorkplace
             // passwordConfirmTextBox
             // 
             passwordConfirmTextBox.AnimateReadOnly = false;
-            passwordConfirmTextBox.BackColor = Color.FromArgb(50, 50, 50);
+            passwordConfirmTextBox.BackColor = SystemColors.Control;
             passwordConfirmTextBox.BackgroundImageLayout = ImageLayout.None;
             passwordConfirmTextBox.CharacterCasing = CharacterCasing.Normal;
             passwordConfirmTextBox.Depth = 0;
             passwordConfirmTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             passwordConfirmTextBox.HideSelection = true;
-            passwordConfirmTextBox.Hint = "Confirm password";
+            passwordConfirmTextBox.Hint = "Подтверждение пароля";
             passwordConfirmTextBox.LeadingIcon = null;
             passwordConfirmTextBox.Location = new Point(372, 239);
             passwordConfirmTextBox.MaxLength = 32767;
@@ -235,15 +235,15 @@ namespace AuthmatedWorkplace
             registerButton.MouseState = MaterialSkin.MouseState.HOVER;
             registerButton.Name = "registerButton";
             registerButton.NoAccentTextColor = Color.Empty;
-            registerButton.Size = new Size(89, 36);
+            registerButton.Size = new Size(126, 36);
             registerButton.TabIndex = 6;
-            registerButton.Text = "Register";
+            registerButton.Text = "Регистрация";
             registerButton.Type = MaterialButton.MaterialButtonType.Contained;
             registerButton.UseAccentColor = false;
             registerButton.UseVisualStyleBackColor = false;
             registerButton.Click += registerButton_Click;
             // 
-            // canselButton
+            // cancelButton
             // 
             cancelButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             cancelButton.BackColor = Color.FromArgb(50, 50, 50);
@@ -253,14 +253,14 @@ namespace AuthmatedWorkplace
             cancelButton.ForeColor = Color.FromArgb(222, 255, 255, 255);
             cancelButton.HighEmphasis = true;
             cancelButton.Icon = null;
-            cancelButton.Location = new Point(145, 312);
+            cancelButton.Location = new Point(160, 312);
             cancelButton.Margin = new Padding(4, 6, 4, 6);
             cancelButton.MouseState = MaterialSkin.MouseState.HOVER;
-            cancelButton.Name = "canselButton";
+            cancelButton.Name = "cancelButton";
             cancelButton.NoAccentTextColor = Color.Empty;
-            cancelButton.Size = new Size(76, 36);
+            cancelButton.Size = new Size(162, 36);
             cancelButton.TabIndex = 7;
-            cancelButton.Text = "Cancel";
+            cancelButton.Text = "Вернутся к входу";
             cancelButton.Type = MaterialButton.MaterialButtonType.Contained;
             cancelButton.UseAccentColor = false;
             cancelButton.UseVisualStyleBackColor = false;
@@ -282,7 +282,7 @@ namespace AuthmatedWorkplace
             Name = "Register";
             Sizable = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Register";
+            Text = "Регистрация нового пользователя";
             ResumeLayout(false);
             PerformLayout();
         }

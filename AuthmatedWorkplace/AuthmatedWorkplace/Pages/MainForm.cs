@@ -16,7 +16,7 @@ namespace AuthmatedWorkplace.Pages
         public MainForm(AppDbContext context) : base(context)
         {
             InitializeComponent();
-            createToolStripMenuItem.Text = $"Create {Constants.EntityName}";
+            createToolStripMenuItem.Text = $"Создать {Constants.EntityName}";
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)

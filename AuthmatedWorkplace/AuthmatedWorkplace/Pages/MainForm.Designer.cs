@@ -73,20 +73,20 @@ namespace AuthmatedWorkplace.Pages
             applicationToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { logoutToolStripMenuItem, exitToolStripMenuItem });
             applicationToolStripMenuItem.Name = "applicationToolStripMenuItem";
             applicationToolStripMenuItem.Size = new Size(89, 21);
-            applicationToolStripMenuItem.Text = "Application";
+            applicationToolStripMenuItem.Text = "Приложени";
             // 
             // logoutToolStripMenuItem
             // 
             logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             logoutToolStripMenuItem.Size = new Size(120, 22);
-            logoutToolStripMenuItem.Text = "Logout";
+            logoutToolStripMenuItem.Text = "Выход из аккаунта";
             logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             exitToolStripMenuItem.Size = new Size(120, 22);
-            exitToolStripMenuItem.Text = "Exit";
+            exitToolStripMenuItem.Text = "Выход";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // themeToolStripMenuItem
@@ -94,34 +94,34 @@ namespace AuthmatedWorkplace.Pages
             themeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { colorToolStripMenuItem, typeToolStripMenuItem });
             themeToolStripMenuItem.Name = "themeToolStripMenuItem";
             themeToolStripMenuItem.Size = new Size(64, 21);
-            themeToolStripMenuItem.Text = "Theme";
+            themeToolStripMenuItem.Text = "Темы";
             // 
             // colorToolStripMenuItem
             // 
             colorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { greenToolStripMenuItem, blueToolStripMenuItem, orangeToolStripMenuItem });
             colorToolStripMenuItem.Name = "colorToolStripMenuItem";
             colorToolStripMenuItem.Size = new Size(109, 22);
-            colorToolStripMenuItem.Text = "Color";
+            colorToolStripMenuItem.Text = "Цвет";
             // 
             // greenToolStripMenuItem
             // 
             greenToolStripMenuItem.Name = "greenToolStripMenuItem";
             greenToolStripMenuItem.Size = new Size(124, 22);
-            greenToolStripMenuItem.Text = "Green";
+            greenToolStripMenuItem.Text = "Зеленый";
             greenToolStripMenuItem.Click += greenToolStripMenuItem_Click;
             // 
             // blueToolStripMenuItem
             // 
             blueToolStripMenuItem.Name = "blueToolStripMenuItem";
             blueToolStripMenuItem.Size = new Size(124, 22);
-            blueToolStripMenuItem.Text = "Blue";
+            blueToolStripMenuItem.Text = "Синий";
             blueToolStripMenuItem.Click += blueToolStripMenuItem_Click;
             // 
             // orangeToolStripMenuItem
             // 
             orangeToolStripMenuItem.Name = "orangeToolStripMenuItem";
             orangeToolStripMenuItem.Size = new Size(124, 22);
-            orangeToolStripMenuItem.Text = "Orange";
+            orangeToolStripMenuItem.Text = "Оранжевый";
             orangeToolStripMenuItem.Click += orangeToolStripMenuItem_Click;
             // 
             // typeToolStripMenuItem
@@ -129,20 +129,20 @@ namespace AuthmatedWorkplace.Pages
             typeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { lightToolStripMenuItem, darkToolStripMenuItem });
             typeToolStripMenuItem.Name = "typeToolStripMenuItem";
             typeToolStripMenuItem.Size = new Size(109, 22);
-            typeToolStripMenuItem.Text = "Type";
+            typeToolStripMenuItem.Text = "Тип темы";
             // 
             // lightToolStripMenuItem
             // 
             lightToolStripMenuItem.Name = "lightToolStripMenuItem";
             lightToolStripMenuItem.Size = new Size(107, 22);
-            lightToolStripMenuItem.Text = "Light";
+            lightToolStripMenuItem.Text = "Светлая";
             lightToolStripMenuItem.Click += lightToolStripMenuItem_Click;
             // 
             // darkToolStripMenuItem
             // 
             darkToolStripMenuItem.Name = "darkToolStripMenuItem";
             darkToolStripMenuItem.Size = new Size(107, 22);
-            darkToolStripMenuItem.Text = "Dark";
+            darkToolStripMenuItem.Text = "Тёмная";
             darkToolStripMenuItem.Click += darkToolStripMenuItem_Click;
             // 
             // dataToolStripMenuItem
@@ -150,20 +150,19 @@ namespace AuthmatedWorkplace.Pages
             dataToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createToolStripMenuItem, refreshToolStripMenuItem });
             dataToolStripMenuItem.Name = "dataToolStripMenuItem";
             dataToolStripMenuItem.Size = new Size(50, 21);
-            dataToolStripMenuItem.Text = "Data";
+            dataToolStripMenuItem.Text = "Данные";
             // 
             // createToolStripMenuItem
             // 
             createToolStripMenuItem.Name = "createToolStripMenuItem";
             createToolStripMenuItem.Size = new Size(126, 22);
-            createToolStripMenuItem.Text = "Create";
             createToolStripMenuItem.Click += createToolStripMenuItem_Click_1;
             // 
             // refreshToolStripMenuItem
             // 
             refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
             refreshToolStripMenuItem.Size = new Size(126, 22);
-            refreshToolStripMenuItem.Text = "Refresh";
+            refreshToolStripMenuItem.Text = "Обновить данные";
             refreshToolStripMenuItem.Click += refreshToolStripMenuItem_Click;
             // 
             // dataFlowLayoutPanel
@@ -238,7 +237,7 @@ namespace AuthmatedWorkplace.Pages
             typeLabel.Name = "typeLabel";
             typeLabel.Size = new Size(36, 19);
             typeLabel.TabIndex = 6;
-            typeLabel.Text = "Type";
+            typeLabel.Text = "Тип";
             // 
             // dateLabel
             // 
