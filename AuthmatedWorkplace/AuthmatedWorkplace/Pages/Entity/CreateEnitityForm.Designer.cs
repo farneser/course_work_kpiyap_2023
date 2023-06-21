@@ -50,7 +50,7 @@ namespace AuthmatedWorkplace.Pages
             nameTextBox.Depth = 0;
             nameTextBox.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             nameTextBox.HideSelection = true;
-            nameTextBox.Hint = "Предмет";
+            nameTextBox.Hint = Constants.Name;
             nameTextBox.LeadingIcon = null;
             nameTextBox.Location = new Point(19, 83);
             nameTextBox.MaxLength = 32767;

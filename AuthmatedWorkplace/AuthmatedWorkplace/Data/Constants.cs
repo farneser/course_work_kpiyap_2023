@@ -8,7 +8,7 @@ namespace AuthmatedWorkplace.Data
 {
     public static class Constants
     {
-        public static string Name = "Предмет";
+        public static string Name = "Дисциплина";
         public static string Description = "Описание";
         public static string Num = "Часы";
         public static string TypeOne = "Обычное";
