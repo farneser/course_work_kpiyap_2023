@@ -268,7 +268,7 @@ namespace AuthmatedWorkplace.Pages
             MainMenuStrip = mainFormMenuStrip;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "MainForm";
+            Text = "Главное меню";
             Load += MainForm_Load;
             mainFormMenuStrip.ResumeLayout(false);
             mainFormMenuStrip.PerformLayout();

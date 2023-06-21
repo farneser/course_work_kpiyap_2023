@@ -71,9 +71,9 @@ namespace AuthmatedWorkplace.Pages
 
             foreach (var entity in _appDbContext.Entities.Where(e => e.UserId == Properties.Settings.Default.UserID))
             {
-                var panel = new Panel() { Width = 850, Height = 50, Padding = new Padding(0) };
+                var panel = new Panel() { Width = 830, Height = 50, Padding = new Padding(0) };
 
-                var updateButton = new MaterialButton() { Text = "✎", Location = new Point(700, 0) };
+                var updateButton = new MaterialButton() { Text = "✎", Location = new Point(680, 0) };
 
                 updateButton.Click += (s, e) =>
                 {
@@ -82,7 +82,7 @@ namespace AuthmatedWorkplace.Pages
                     RefreshData();
                 };
 
-                var deleteButton = new MaterialButton() { Text = "🗑", Location = new Point(770, 0) };
+                var deleteButton = new MaterialButton() { Text = "🗑", Location = new Point(750, 0) };
 
                 deleteButton.Click += (s, e) =>
                 {

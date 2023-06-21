@@ -12,7 +12,7 @@ namespace AuthmatedWorkplace.Data
         public static string Description = "Описание";
         public static string Num = "Часы";
         public static string TypeOne = "Обычное";
-        public static string TypeTwo = "Лабораторная";
+        public static string TypeTwo = "Практика";
         public static string Date = "Дата занятия";
 
         public static string EntityName = "Занятие";

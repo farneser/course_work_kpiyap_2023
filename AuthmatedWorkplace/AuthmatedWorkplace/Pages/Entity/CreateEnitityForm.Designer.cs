@@ -128,10 +128,10 @@ namespace AuthmatedWorkplace.Pages
             typeRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
             typeRadioButton2.Name = "typeRadioButton2";
             typeRadioButton2.Ripple = true;
-            typeRadioButton2.Size = new Size(144, 37);
+            typeRadioButton2.Size = new Size(108, 37);
             typeRadioButton2.TabIndex = 5;
             typeRadioButton2.TabStop = true;
-            typeRadioButton2.Text = "Лабораторная";
+            typeRadioButton2.Text = "Практика";
             typeRadioButton2.UseVisualStyleBackColor = true;
             // 
             // numTextBox
@@ -175,14 +175,14 @@ namespace AuthmatedWorkplace.Pages
             createButton.ForeColor = Color.FromArgb(222, 255, 255, 255);
             createButton.HighEmphasis = true;
             createButton.Icon = null;
-            createButton.Location = new Point(605, 224);
+            createButton.Location = new Point(522, 224);
             createButton.Margin = new Padding(4, 6, 4, 6);
             createButton.MouseState = MaterialSkin.MouseState.HOVER;
             createButton.Name = "createButton";
             createButton.NoAccentTextColor = Color.Empty;
-            createButton.Size = new Size(76, 36);
+            createButton.Size = new Size(159, 36);
             createButton.TabIndex = 7;
-            createButton.Text = "Create";
+            createButton.Text = "Создать занятие";
             createButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             createButton.UseAccentColor = false;
             createButton.UseVisualStyleBackColor = false;
@@ -225,7 +225,7 @@ namespace AuthmatedWorkplace.Pages
             Controls.Add(descriptionTextBox);
             Controls.Add(nameTextBox);
             Name = "CreateEnitityForm";
-            Text = $"Форма создание занятия";
+            Text = "Форма создание занятия";
             ResumeLayout(false);
             PerformLayout();
         }

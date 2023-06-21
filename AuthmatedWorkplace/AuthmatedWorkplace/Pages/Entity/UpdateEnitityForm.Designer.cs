@@ -127,10 +127,10 @@ namespace AuthmatedWorkplace.Pages
             typeRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
             typeRadioButton2.Name = "typeRadioButton2";
             typeRadioButton2.Ripple = true;
-            typeRadioButton2.Size = new Size(144, 37);
+            typeRadioButton2.Size = new Size(108, 37);
             typeRadioButton2.TabIndex = 5;
             typeRadioButton2.TabStop = true;
-            typeRadioButton2.Text = "Лабораторная";
+            typeRadioButton2.Text = "Практика";
             typeRadioButton2.UseVisualStyleBackColor = true;
             // 
             // numTextBox
@@ -174,14 +174,14 @@ namespace AuthmatedWorkplace.Pages
             updateButton.ForeColor = Color.FromArgb(222, 255, 255, 255);
             updateButton.HighEmphasis = true;
             updateButton.Icon = null;
-            updateButton.Location = new Point(605, 224);
+            updateButton.Location = new Point(581, 224);
             updateButton.Margin = new Padding(4, 6, 4, 6);
             updateButton.MouseState = MaterialSkin.MouseState.HOVER;
             updateButton.Name = "updateButton";
             updateButton.NoAccentTextColor = Color.Empty;
-            updateButton.Size = new Size(77, 36);
+            updateButton.Size = new Size(100, 36);
             updateButton.TabIndex = 7;
-            updateButton.Text = "Update";
+            updateButton.Text = "Обновить";
             updateButton.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             updateButton.UseAccentColor = false;
             updateButton.UseVisualStyleBackColor = false;
@@ -224,7 +224,7 @@ namespace AuthmatedWorkplace.Pages
             Controls.Add(descriptionTextBox);
             Controls.Add(nameTextBox);
             Name = "UpdateEnitityForm";
-            Text = $"Форма обновления занятия";
+            Text = "Форма обновления занятия";
             Load += UpdateEntityForm_Load;
             ResumeLayout(false);
             PerformLayout();
