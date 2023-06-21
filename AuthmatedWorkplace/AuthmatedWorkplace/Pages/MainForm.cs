@@ -2,6 +2,7 @@
 using AuthmatedWorkplace.Data.Models;
 using AuthmatedWorkplace.Data.Forms;
 using MaterialSkin.Controls;
+using AuthmatedWorkplace.Data;
 
 namespace AuthmatedWorkplace.Pages
 {
@@ -15,6 +16,7 @@ namespace AuthmatedWorkplace.Pages
         public MainForm(AppDbContext context) : base(context)
         {
             InitializeComponent();
+            createToolStripMenuItem.Text = $"Create {Constants.EntityName}";
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,9 +71,9 @@ namespace AuthmatedWorkplace.Pages
 
             foreach (var entity in _appDbContext.Entities.Where(e => e.UserId == Properties.Settings.Default.UserID))
             {
-                var panel = new Panel() { Width = 750, Height = 100 };
+                var panel = new Panel() { Width = 850, Height = 50, Padding = new Padding(0) };
 
-                var updateButton = new MaterialButton() { Text = "Update", Location = new Point(500, 35) };
+                var updateButton = new MaterialButton() { Text = "✎", Location = new Point(700, 0) };
 
                 updateButton.Click += (s, e) =>
                 {
@@ -80,7 +82,7 @@ namespace AuthmatedWorkplace.Pages
                     RefreshData();
                 };
 
-                var deleteButton = new MaterialButton() { Text = "Delete", Location = new Point(600, 35) };
+                var deleteButton = new MaterialButton() { Text = "🗑", Location = new Point(770, 0) };
 
                 deleteButton.Click += (s, e) =>
                 {
@@ -92,7 +94,6 @@ namespace AuthmatedWorkplace.Pages
                 panel.Controls.Add(new EntityPanel(entity));
                 panel.Controls.Add(updateButton);
                 panel.Controls.Add(deleteButton);
-
 
                 dataFlowLayoutPanel.Controls.Add(panel);
             }

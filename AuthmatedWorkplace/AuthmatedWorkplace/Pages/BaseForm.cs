@@ -8,7 +8,7 @@ namespace AuthmatedWorkplace.Pages
     {
         protected AppDbContext? _appDbContext;
 
-        private MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
+        protected MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         public BaseForm() { }
         public BaseForm(AppDbContext context) : base()
         {
