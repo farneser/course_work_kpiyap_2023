@@ -69,7 +69,7 @@ namespace AuthmatedWorkplace.Pages
         {
             dataFlowLayoutPanel.Controls.Clear();
 
-            foreach (var entity in _appDbContext.Entities.Where(e => e.UserId == Properties.Settings.Default.UserID))
+            foreach (var entity in _appDbContext.Entities.Where(e => e.UserId == Properties.Settings.Default.UserID).OrderBy(e => e.Date))
             {
                 var panel = new Panel() { Width = 830, Height = 50, Padding = new Padding(0) };
 

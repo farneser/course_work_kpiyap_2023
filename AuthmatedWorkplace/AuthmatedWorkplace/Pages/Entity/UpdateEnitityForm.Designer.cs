@@ -189,7 +189,7 @@ namespace AuthmatedWorkplace.Pages
             // 
             // dateTimePicker
             // 
-            dateTimePicker.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            dateTimePicker.CustomFormat = "MM/dd/yyyy HH:mm:ss";
             dateTimePicker.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             dateTimePicker.Format = DateTimePickerFormat.Custom;
             dateTimePicker.Location = new Point(136, 229);
